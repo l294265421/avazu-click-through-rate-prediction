@@ -115,7 +115,7 @@ class WideDeepClassifier:
 
         model = self.build_estimator(self.FLAGS.model_dir, self.FLAGS.model_type)
 
-        model.train(input_fn=lambda: self.input_fn(self.FLAGS.train_data, self.FLAGS.epochs_per_eval, False, self.FLAGS.batch_size, False))
+        model.train(input_fn=lambda: self.input_fn(self.FLAGS.train_data, self.FLAGS.train_epochs, False, self.FLAGS.batch_size, False))
         self.model = model
 
 
